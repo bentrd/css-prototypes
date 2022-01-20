@@ -25,9 +25,8 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: #fff;
     font-size: 1.5em;
-    padding: 1em 0;
+    padding: 1em;
     margin: 1em;
     border-radius: 20px;
     border: solid .17em var(--color);
@@ -36,33 +35,46 @@ body {
     0 0 .7em var(--color);
 }
 
-.blue-neon-text {
-    color: rgb(117, 234, 255);
-    text-shadow: rgb(117, 234, 255) 0 0 20px,rgb(117, 234, 255) 0 0 15px;
+.neon-text {
+    --text-color: rgb(117, 234, 255);
+    color: var(--text-color);
+    text-shadow: var(--text-color) 0 0 20px,var(--text-color) 0 0 15px;
 }
+
 .box-neon.btc .btc {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     align-items: center;
     font-size: 1.4em;
     white-space: nowrap;
+    margin: .5em 0;
 }
-.box-neon.btc .btc img {
-    margin: 0.5em 1em;
+
+.box-neon.btc .btc span:first-child {
+    font-size: 2em;
+    --text-color: rgb(250, 169, 246);
+    color: var(--text-color);
+    text-shadow: var(--text-color) 0 0 20px,var(--text-color) 0 0 15px;
 }
 
 .box-neon.flat {
+    --color: rgb(250, 169, 246);
     flex-direction: row;
-    padding: 1em;
+}
+
+.box-neon.flat span:first-child {
+    --text-color: rgb(250, 169, 246);
+    color: var(--text-color);
+    text-shadow: var(--text-color) 0 0 20px,var(--text-color) 0 0 15px;
 }
 
 .box-neon.flat span:last-child {
-    opacity: .66;
+    opacity: .75;
 }
 
 .box-neon.btn {
+    --color: rgb(117, 234, 255);
     cursor: pointer;
-    padding: 1em;
     background: transparent;
     text-transform: uppercase;
 }
