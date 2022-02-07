@@ -18,6 +18,62 @@ body {
     align-items: center;
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 99;
+    box-sizing: border-box;
+    height: 8vh;
+    padding: 15px 50px;
+    background: #111;
+    color: #fff;
+    --color: rgb(220, 69, 220);
+    border-bottom: solid .17em var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 8px #00000099;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 900;
+    background: rgb(117, 234, 255);
+    padding: 5px 15px;
+    border-radius: 1em;
+    margin: 0 .5em;
+    transition: all 500ms ease-in-out;
+}
+
+.link.red {
+    background: rgb(255, 87, 151);
+}
+
+.link.purple {
+    background: rgb(250, 169, 246);
+}
+
+.link:hover {
+    background-color: white;
+}
+
+.mt {
+    margin-top: 9vh !important;
+}
+
 .box-neon {
     --color: rgb(255, 87, 151);
     display: flex;
