@@ -5,17 +5,32 @@ html, body {
 }
 
 body {
-    background-color: #000;
-    background-image: url("assets/bg.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #111;
+    padding: 0 100px;
+}
+
+.background {
+    position: fixed;
+    background-color: #111;
+    top: 0;
+    left: -100vw;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    width: 300vw;
+    height: 300vh;
+    background: url("./assets/L.svg") 0 0 space;
+    background-size: 60px;
+    transform: rotate(45deg);
 }
 
 .header {
@@ -91,7 +106,6 @@ body {
 
 .box-neon.btc {
     background-color: #00000066;
-    max-width: 300px;
 }
 
 .box-neon.btc img {
@@ -122,24 +136,16 @@ body {
 }
 
 .box-neon.btc .cryptobox {
-    --color: rgb(240, 70, 240);
-    border-radius: 20px;
-    border: solid .1em var(--color);
-    box-shadow:
-    inset 0 0 .5em var(--color),
-    0 0 .7em var(--color);
-
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     font-size: 1.4em;
     white-space: nowrap;
     margin: .3em;
-    padding-top: .6em;
 }
 
-.box-neon.btc .cryptobox span:first-child {
-    font-size: 1.7em;
+.box-neon.btc .cryptobox span {
+    font-size: .8em;
     --text-color: rgb(250, 169, 246);
     color: var(--text-color);
     text-shadow: var(--text-color) 0 0 20px,var(--text-color) 0 0 15px;
@@ -164,22 +170,27 @@ body {
 }
 
 .box-neon.btn {
-    --color: rgb(117, 234, 255);
+    --color: rgb(117, 255, 163);
+    --text-color: rgb(117, 255, 163);
     cursor: pointer;
-    background: transparent;
     text-transform: uppercase;
+    background-color: #00000099;
+    min-width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .bottom-texts {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border-radius: 1em;
     border: #FFFFFF11 1px solid;
     border-top: #FFFFFF33 1px solid;
     background-color: #FFFFFF09;
-    width: 40%;
-    min-width: 300px;
-    margin: 1em;
+    max-width: 500px;
     padding: .5em;
+    margin: 1em;
     font-size: 1em;
     text-align: center;
     color: #FFFFFFDD;
@@ -190,5 +201,35 @@ body {
 .row {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.buy-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box-neon.golden {
+    --color: rgb(255, 215, 0);
+    --text-color: rgb(255, 215, 0);
+}
+
+.box-neon.opal {
+    --color: rgb(117, 234, 255);
+    --text-color: rgb(250, 169, 246);
+}
+
+@media only screen and (max-width: 1200px) {
+    .row {
+        flex-wrap: wrap;
+    }
 }
