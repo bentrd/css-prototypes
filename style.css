@@ -99,6 +99,7 @@ body {
     box-shadow:
     inset 0 0 .5em var(--color),
     0 0 .7em var(--color);
+    z-index: 2;
 }
 
 .box-neon.btc {
@@ -225,6 +226,50 @@ body {
 .box-neon.opal {
     --color: rgb(117, 234, 255);
     --text-color: rgb(250, 169, 246);
+}
+
+.box-neon.quantity-selector {
+    --text-color: rgb(236, 160, 255);
+    --color: rgb(236, 160, 255);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 20px;
+    margin: 0;
+    padding: 5px 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+    box-shadow: 0 0 .7em var(--color);
+    transform: translateY(-10px);
+    z-index: 1;
+}
+
+.quantity-selector span {
+    margin: 0 10px;
+}
+
+.quantity-selector button {
+    background: var(--color);
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    aspect-ratio: 1;
+    font-weight: 700;
+    box-shadow: 0 0 .7em var(--color);
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+.quantity-selector button:hover {
+    opacity: 90%;
+    transition: all 100ms;
+}
+
+.quantity-selector button:active {
+    opacity: 75%;
 }
 
 @media only screen and (max-width: 1200px) {
