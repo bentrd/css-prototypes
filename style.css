@@ -277,6 +277,10 @@ body {
     opacity: 75%;
 }
 
+.neon-text.pink {
+    --text-color: rgb(236, 160, 255);
+}
+
 @media only screen and (max-width: 1200px) {
     .main {
         flex-flow: column nowrap;
