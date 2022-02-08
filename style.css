@@ -61,6 +61,7 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 2em;
+
 }
 
 .link {
@@ -78,12 +79,8 @@ body {
     background-color: white;
 }
 
-.header-text {
-
-}
-
 .mt {
-    margin-top: 9vh !important;
+    margin-top: 10vh !important;
 }
 
 .box-neon {
@@ -147,6 +144,10 @@ body {
     --text-color: rgb(250, 169, 246);
     color: var(--text-color);
     text-shadow: var(--text-color) 0 0 20px,var(--text-color) 0 0 15px;
+}
+
+.box-neon.btc .cryptobox img {
+    margin: 0.2em;
 }
 
 .box-neon.flat {
@@ -216,6 +217,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.buy-buttons p {
+    margin: .2em 0;
 }
 
 .box-neon.golden {
@@ -303,6 +308,11 @@ body {
 
     .header {
         padding: 0;
+    }
+
+    .box-neon.btc .cryptobox img {
+        height: 80px;
+        margin: 0;
     }
 
 }
