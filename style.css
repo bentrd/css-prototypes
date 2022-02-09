@@ -282,6 +282,72 @@ body {
     --text-color: rgb(236, 160, 255);
 }
 
+.wallet {
+    --color: rgb(117, 234, 255);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 1em;
+    border: solid 2px var(--color);
+    border-left: none;
+    box-shadow: 0 0 .5em var(--color),
+                inset 0 0 .5em var(--color);
+}
+
+.wallet span {
+    margin: 0 10px 0 45px;
+}
+
+.wallet button {
+    outline: none;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.wallet button img {
+    transition: transform 200ms ease-in-out;
+}
+
+.wallet button:first-child {
+    --color: #faa9f6;
+    position: absolute;
+    left: 0;
+    background: #222;
+    aspect-ratio: 1;
+    border: solid 2px var(--color);
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 .5em var(--color),
+                inset 0 0 .5em var(--color);
+}
+
+.wallet button:last-child {
+    background-color: transparent;
+    border: none;
+    transform: translateY(1px);
+}
+
+.wallet button:hover img {
+    transform: scale(1.1);
+    filter: brightness(0) invert(1);
+}
+
+.wallet button:first-child:hover {
+    --color: white;
+}
+
+.wallet button:active img {
+    transition: all 100ms ease-in-out;
+    transform: scale(1);
+}
+
+.wallet .token {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+}
+
 @media only screen and (max-width: 1200px) {
     .main {
         flex-flow: column nowrap;
