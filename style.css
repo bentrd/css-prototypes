@@ -61,7 +61,11 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 2em;
+}
 
+.logo img {
+    margin: 5px;
+    height: 6vh;
 }
 
 .link {
@@ -148,6 +152,7 @@ body {
 
 .box-neon.btc .cryptobox img {
     margin: 0.2em;
+    aspect-ratio: 1;
 }
 
 .box-neon.flat {
@@ -386,4 +391,12 @@ body {
         margin: 0;
     }
 
+
+    .logo {
+        font-size: 1.2em;
+    }
+
+    .wallet {
+        margin-right: 10px;
+    }
 }
